@@ -1,0 +1,28 @@
+
+<form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+    <div>
+      <label for="email">Email:</label>
+      <input type="email" formControlName="email" id="email" required />
+      <!-- Show error if email field is invalid -->
+      <div *ngIf="isInvalid('email')">
+        <small class="error">Please enter a valid email.</small>
+      </div>
+    </div>
+  
+    <div>
+      <label for="password">Password:</label>
+      <input type="password" formControlName="password" id="password" required />
+      <!-- Show error if password field is invalid -->
+      <div *ngIf="isInvalid('password')">
+        <small class="error">Password must be at least 6 characters long.</small>
+      </div>
+    </div>
+  
+    <button type="submit" [disabled]="loginForm.invalid">Login</button>
+  
+    <!-- Display login error if authentication fails -->
+    <div *ngIf="loginError" class="error">
+      {{ loginError }}
+    </div>
+  </form>
+  
