@@ -1,6 +1,6 @@
 
 import { NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
+import { RouterModule,  Routes } from '@angular/router';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import { TodoListComponent } from './todo-list/todo-list.component';
@@ -23,12 +23,11 @@ export const route: Routes = [
   { path: 'todo-list', component: TodoListComponent, canActivate: [authGuard] },
   { path: '', redirectTo: '/login', pathMatch: 'full' }, 
 ];
-const Routes: Routes = [
-  { path: '', redirectTo: '/todo', pathMatch: 'full' },
-  { path: 'todo', component: TodoListComponent }
-];
 
 
+@NgModule({
+  imports: [BrowserModule, ReactiveFormsModule],  
+})
 
 
 @NgModule({

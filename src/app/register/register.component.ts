@@ -1,14 +1,5 @@
 import { Component } from '@angular/core';
-import { Router } from '@angular/router';
-
-@Component({
-  selector: 'app-register',
-  standalone: true,
-  imports: [],
-  templateUrl: './register.component.html',
-  styleUrl: './register.component.css'
-})
-
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-register',
@@ -16,33 +7,29 @@ import { Router } from '@angular/router';
   styleUrls: ['./register.component.css']
 })
 export class RegisterComponent {
-  name = '';
-  email = '';
-  password = '';
+  registerForm: FormGroup;
+  errorMessage: string = '';
 
-  constructor(private router: Router) {}
+  constructor(private fb: FormBuilder) {
+    // Initialize the form group with controls
+    this.registerForm = this.fb.group({
+      name: ['', Validators.required],
+      email: ['', [Validators.required, Validators.email]],
+      password: ['', Validators.required]
+    });
+  }
 
-  onRegister() {
-    const user = { name: this.name, password: this.password };
-    localStorage.setItem(this.email, JSON.stringify(user));
-    this.router.navigate(['/login']);
+  // Register function triggered on form submit
+  onRegister(): void {
+    if (this.registerForm.valid) {
+      const name = this.registerForm.value.name;
+      const email = this.registerForm.value.email;
+      const password = this.registerForm.value.password;
+
+      // Handle registration logic here
+      console.log('Form Submitted', { name, email, password });
+    } else {
+      this.errorMessage = 'Please fill out the form correctly.';
+    }
   }
 }
-
-
-@Component({
-  selector: 'app-register',
-  templateUrl: './register.component.html',
-  styleUrls: ['./register.component.css']
-})
-export class registerComponent {
-  name: string = '';
-  email: string = '';
-  password: string = '';
-
-  onRegister() {
-    console.log('Form submitted:', this.name, this.email, this.password);
-    // Add your registration logic here
-  }
-}
-

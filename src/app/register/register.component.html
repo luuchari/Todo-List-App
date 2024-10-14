@@ -1,1 +1,16 @@
+<h2>Register</h2>
+<form [formGroup]="registerForm" (ngSubmit)="onRegister()">
+  <label>Name</label>
+  <input type="text" formControlName="name" required>
+  
+  <label>Email</label>
+  <input type="email" formControlName="email" required>
+  
+  <label>Password</label>
+  <input type="password" formControlName="password" required>
+  
+  <button type="submit" [disabled]="registerForm.invalid">Register</button>
+</form>
+
+<div *ngIf="errorMessage">{{ errorMessage }}</div>
 
