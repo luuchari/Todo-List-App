@@ -9,17 +9,27 @@ import { authGuard } from './auth.guard';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
 import { Injectable } from '@angular/core';
-  import { CanActivate, Router } from '@angular/router';
+import { CanActivate, Router } from '@angular/router';
 
 
 
 
-const route: Routes = [
+
+
+export const route: Routes = [
   { path: '', redirectTo: '/login', pathMatch: 'full' },
   { path: 'login', component: LoginComponent },
   { path: 'register', component: RegisterComponent },
   { path: 'todo-list', component: TodoListComponent, canActivate: [authGuard] },
+  { path: '', redirectTo: '/login', pathMatch: 'full' }, 
 ];
+const Routes: Routes = [
+  { path: '', redirectTo: '/todo', pathMatch: 'full' },
+  { path: 'todo', component: TodoListComponent }
+];
+
+
+
 
 @NgModule({
   imports: [RouterModule.forRoot(route)],

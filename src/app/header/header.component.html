@@ -1,1 +1,7 @@
-<p>header works!</p>
+<nav class="navbar">
+    <a routerLink="/login" routerLinkActive="active">Login</a>
+    <a routerLink="/register" routerLinkActive="active">Register</a>
+    <a routerLink="/todo-list" routerLinkActive="active" *ngIf="isAuthenticated()">Todo List</a>
+    <button *ngIf="isAuthenticated()" (click)="logout()">Logout</button>
+  </nav>
+  
