@@ -1,0 +1,39 @@
+/* Include this in your styles.css or a relevant stylesheet */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+}
+
+.container {
+  background-color: #556B2F; /* Dark Olive Green */
+  padding: 20px;
+  min-height: 100vh; /* Full height */
+}
+
+nav {
+  margin-bottom: 20px;
+}
+
+nav ul {
+  list-style-type: none; /* Remove default list styling */
+  padding: 0;
+}
+
+nav li {
+  display: inline; /* Horizontal list items */
+  margin-right: 20px; /* Space between items */
+}
+
+nav a {
+  text-decoration: none; /* Remove underline */
+  color: white; /* White text */
+  font-weight: 600; /* Bold text */
+  transition: color 0.3s; /* Smooth transition for hover effect */
+}
+
+nav a:hover {
+  color: #FFD700; /* Gold color on hover */
+}

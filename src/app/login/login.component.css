@@ -1,0 +1,55 @@
+/* Import Poppins font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+body {
+    background-color: olive; /* Set background color to olive */
+    font-family: 'Poppins', sans-serif; /* Apply Poppins font */
+    display: flex;
+    justify-content: center; /* Center the form horizontally */
+    align-items: center; /* Center the form vertically */
+    height: 100vh; /* Full viewport height */
+    margin: 0; /* Remove default margin */
+}
+
+h1 {
+    text-align: center; /* Center align h1 text */
+}
+
+form {
+    text-align: center; /* Center align text inside the form */
+    padding: 20px; /* Add some padding */
+    background-color: rgba(255, 255, 255, 0.9); /* Optional: Add a white background with transparency */
+    border-radius: 8px; /* Optional: Add rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional: Add shadow for depth */
+}
+
+label {
+    display: block; /* Display labels as block for better layout */
+    margin: 10px 0 5px; /* Margin for spacing */
+}
+
+input {
+    width: 100%; /* Full width inputs */
+    padding: 10px; /* Padding for better touch target */
+    margin-bottom: 15px; /* Space between inputs */
+    border: 1px solid #ccc; /* Border for inputs */
+    border-radius: 4px; /* Rounded corners for inputs */
+}
+
+button {
+    padding: 10px 20px; /* Padding for button */
+    background-color: olive; /* Olive background for button */
+    color: white; /* White text for button */
+    border: none; /* Remove default border */
+    border-radius: 4px; /* Rounded corners for button */
+    cursor: pointer; /* Pointer cursor on hover */
+}
+
+button:disabled {
+    background-color: #a3a347; /* Change background when disabled */
+    cursor: not-allowed; /* Not-allowed cursor when disabled */
+}
+
+.error {
+    color: red; /* Red color for error messages */
+}

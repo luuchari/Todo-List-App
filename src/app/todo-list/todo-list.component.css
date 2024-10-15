@@ -1,0 +1,52 @@
+/* Import Poppins font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #556B2F; /* Dark Olive Green */
+    color: white; /* Text color */
+    text-align: center; /* Center text alignment */
+    padding: 20px; /* Add some padding */
+  }
+  
+  h2 {
+    margin-bottom: 20px; /* Space below the heading */
+  }
+  
+  form {
+    margin-bottom: 20px; /* Space below the form */
+  }
+  
+  input[type="text"],
+  input[type="date"],
+  select {
+    padding: 10px;
+    margin: 10px 0; /* Margin on top and bottom */
+    width: calc(100% - 22px); /* Full width minus padding */
+    max-width: 400px; /* Limit the width */
+    border: none; /* Remove default border */
+    border-radius: 5px; /* Rounded corners */
+  }
+  
+  button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #4CAF50; /* Green background for buttons */
+    color: white; /* Button text color */
+    cursor: pointer; /* Pointer cursor on hover */
+    font-weight: 600; /* Bold text */
+  }
+  
+  button:hover {
+    background-color: #45a049; /* Darker green on hover */
+  }
+  
+  ul {
+    list-style-type: none; /* Remove bullets */
+    padding: 0; /* Remove padding */
+  }
+  
+  li {
+    margin: 10px 0; /* Space between list items */
+  }
+  

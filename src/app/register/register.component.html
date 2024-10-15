@@ -1,16 +1,25 @@
-<h2>Register</h2>
-<form [formGroup]="registerForm" (ngSubmit)="onRegister()">
-  <label>Name</label>
-  <input type="text" formControlName="name" required>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Register</title>
+  <link rel="stylesheet" href="register.component.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<div class="register">
+    <h2>Register</h2>
+  </div>
+  <form (ngSubmit)="onRegister()" class="register-form">
+    <label>Name</label>
+    <input type="text" formControlName="name" required>
   
-  <label>Email</label>
-  <input type="email" formControlName="email" required>
+    <label>Email</label>
+    <input type="email" formControlName="email" required>
   
-  <label>Password</label>
-  <input type="password" formControlName="password" required>
+    <label>Password</label>
+    <input type="password" formControlName="password" required>
   
-  <button type="submit" [disabled]="registerForm.invalid">Register</button>
-</form>
-
-<div *ngIf="errorMessage">{{ errorMessage }}</div>
-
+    <button type="submit" [disabled]="registerForm.invalid">Register</button>
+  </form>
+  
+  <div *ngIf="errorMessage" class="error-message">{{ errorMessage }}</div>

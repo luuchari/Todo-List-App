@@ -1,0 +1,73 @@
+
+/* Import Poppins font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+/* Import Poppins font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: darkolivegreen; /* Background color */
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  height: 100vh; /* Full viewport height */
+  text-align: center; /* Center text */
+}
+
+.register {
+  margin-bottom: 20px; /* Space below the header */
+}
+
+.register-form {
+  background-color: white; /* Form background color */
+  padding: 20px;
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow effect */
+  max-width: 400px; /* Max width of the form */
+  width: 100%; /* Full width */
+}
+h2 {
+    margin: 0; /* Remove default margin */
+    font-weight: 600; /* Bold header */
+    color: #333; /* Header color */
+  }
+
+label {
+  display: block; /* Block display for labels */
+  margin-bottom: 8px; /* Space below labels */
+  font-weight: 600; /* Bold labels */
+}
+
+input {
+  width: 100%; /* Full width */
+  padding: 10px; /* Padding inside inputs */
+  margin-bottom: 20px; /* Space below inputs */
+  border: 1px solid #ccc; /* Border color */
+  border-radius: 4px; /* Rounded corners for inputs */
+  font-size: 16px; /* Input text size */
+}
+
+button {
+  width: 100%; /* Full width */
+  padding: 10px; /* Padding inside the button */
+  background-color: #556B2F; /* Button background color */
+  color: white; /* Button text color */
+  border: none; /* No border */
+  border-radius: 4px; /* Rounded corners */
+  font-size: 18px; /* Button text size */
+  font-weight: 600; /* Bold button text */
+  cursor: pointer; /* Pointer cursor on hover */
+}
+
+button:disabled {
+  background-color: #ccc; /* Disabled button color */
+  cursor: not-allowed; /* Not allowed cursor */
+}
+
+.error-message {
+  color: red; /* Error message color */
+  margin-top: 10px; /* Space above error message */
+  text-align: center; /* Center the error message */
+}
