@@ -7,13 +7,16 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
 </head>
 <div class="container"> 
-  <nav>
-    <a class="navbar-brand" href="/">Todo-list</a>
-    <ul>
-      <li><a routerLink="/login">login</a></li>
-      <li><a routerLink="/register">Register</a></li>
-      <li><a routerLink="/todo-list">Todo-list</a></li>
-    </ul>
+  <nav class="navbar">
+    <div class="container">
+      <a class="navbar-brand" href="/">todo-list</a>
+      <ul class="nav-links">
+        <li><a routerLink="/">login</a></li>
+        <li><a routerLink="/register">register</a></li>
+        <li><a routerLink="/todo-list">todo-list</a></li>
+       
+      </ul>
+    </div>
   </nav>
-</div>
-<router-outlet></router-outlet>
+  <router-outlet></router-outlet>
+
